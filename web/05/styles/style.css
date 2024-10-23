@@ -1,0 +1,36 @@
+/* styles.css */  
+body, html {  
+  margin: 0;  
+  padding: 0;  
+  height: 100%;  
+}  
+
+.background-blur {  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  background-image: url('../images/雪之下.jpg');  
+  background-repeat: no-repeat;  
+  background-position: center;  
+  background-size: cover;  
+  filter: brightness(50%) blur(5px);/* 调整模糊程度 */  
+  z-index: -1; /* 确保背景在内容之下 */  
+}  
+
+.content {  
+  position: relative;  
+  z-index: 1; /* 确保内容在背景之上 */  
+  color: #ffffff; /* 白色文字 */  
+  text-align: center;  
+  padding: 50px;  
+  /* 移除height: 100vh; 以允许内容超出视口时滚动 */  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  /* 可选：为内容添加最大宽度和自动边距以居中 */  
+  max-width: 800px;  
+  margin: 0 auto;  
+}

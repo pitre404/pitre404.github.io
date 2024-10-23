@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#login" onclick="toggleModal('login-modal')">Login</a></li>
+                <li><a href="#register" onclick="toggleModal('register-modal')">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Personal Profile</h1>
+        <p>This is a brief introduction about myself.</p>
+    </section>
+
+    <section id="profile">
+        <h2>About Me</h2>
+        <p>Hi, I'm [Your Name]. I am passionate about [Your Interests].</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li><a href="https://github.com/your-repo" target="_blank">Project 1</a></li>
+            <li><a href="https://github.com/your-repo" target="_blank">Project 2</a></li>
+            <li><a href="https://github.com/your-repo" target="_blank">Project 3</a></li>
+        </ul>
+    </section>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('login-modal')">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('register-modal')">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
